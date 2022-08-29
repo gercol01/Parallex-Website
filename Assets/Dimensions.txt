@@ -1,0 +1,28 @@
+To make picture
+
+Dimensions width x height
+
+Back desert: 4608 x 3255
+Front desert: 3741 x 2700
+Sun: 541 x 551
+Birds: 1031 x 774
+Camel: 3999 x 4000
+Camels: 599 x 257
+Cloud 1: 1801 x 870
+Cloud 2: 1690 x 576
+Tree: 4000 x 2825
+
+Required:
+Back desert: 1069 x 1585
+Front desert: 1069 x 1585
+Sun: 153 x 157
+Birds: 285x 213
+Camel: 397 x 397
+Camels: 223 x 103
+Cloud 1: 242 x 123
+Cloud 2: 259 x 88
+Tree: 774 x 547
+
+ Needed ratio width for desert: 1089 x 1599 
+
+4000 x 5,873
