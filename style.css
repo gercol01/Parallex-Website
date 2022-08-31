@@ -1,13 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box; /* includes padding and border in width */
 }
 
 body{
-    min-height: 100vh;
+    /* min-height: 100vh; gradient is 100% of the view height i.e. the screen */
     background: linear-gradient(#ff0000, #ff8e24);
+    overflow-x: hidden;
 }
 
 header{
@@ -19,14 +19,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
 }
 
 header .logo{
-    color: rgb(255, 255, 255);
-    font-weight: 700;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
-    font-size: 2em;
+    font-weight: 700;
+    font-size: 2em; /*vw is responsive font*/
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -38,52 +39,43 @@ header ul{
 }
 
 header ul li{
-   list-style: none;
-   margin-left: 20px;
-
+    list-style: none;
+    margin-left: 20px;
 }
 
 header ul li a{
     font-family: 'Barlow', sans-serif;
     text-decoration: none;
     padding: 6px 15px;
-    color: rgb(255, 255, 255);
+    color: #fff;
     border-radius: 0px 0px 10px 10px;
 }
 
 header ul li a:hover, header ul li a.active{
     background: #fff;
-    color: #2b1055;
+    color: #000000;
 }
 
 section{
     position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 97vh;
 }
 
-#desertback, #desertfront{
-    position: absolute;
-    top: 0;
-    left: 0;
+section img{
+    display: block;
+    box-sizing: content-box;
+    padding: 0px !important;
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
 
-section #desertback{
-    z-index: 8;
-}
-
-section #desertfront{
-    z-index: 10;
-}
-
 section #text{
-    top: 20%;
+    top: 20vh;
     -webkit-text-stroke: 3px rgb(0, 0, 0);
     position: absolute;
     color:rgb(255, 255, 255);
@@ -92,53 +84,116 @@ section #text{
     z-index: 10;
 }
 
-section #camels{
-    z-index: 9;
+#desertback{
     position: absolute;
-    top: 0;
-    width: 100%;
-    object-fit: cover;
+    top: 50vh;
+    left: 0;
+    z-index: 8;
 }
 
-section #tree{
-    z-index: 9;
+#birds{
     position: absolute;
-    top: 0;
-    width: 100%;
-    object-fit: cover;
+    left: 30vw;
+    width: 25vw !important;
+    height: auto;
+    z-index: 8;
 }
 
-section #sun{
+#sun{
+    position: absolute;
+    top: 7vw;
+    left: 74vw;
+    width: 9.5vw !important;
+    height: auto;
     z-index: 7;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    object-fit: cover;
+    
 }
 
-section #camel{
-    z-index: 11;
+#tree{
     position: absolute;
-    top: 0;
-    width: 100%;
-    object-fit: cover;
-}
-
-section #birds{
+    top: 23vw;
+    left: 47vw;
+    width: 39vw !important;
+    height: auto;
     z-index: 9;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    object-fit: cover;
 }
 
-h3{
-    margin-right: 8%;
-    z-index:11;
-    top: 140%;
-    right: 0;
+#camels{
     position: absolute;
-    color:rgb(0, 0, 0);
-    width: 30% !important;
-    text-align:justify;
+    top: 48vw;
+    left: 7vw;
+    width: 30vw !important;
+    height: auto;
+    z-index: 9;
+}
+
+#testing{ /*desert front and camel*/
+    padding: 0px !important;
+    top: 150vh;
+    position: absolute;
+    left: 0;
+    z-index: 11;
+}
+
+#testing #camel-box{
+    width: 100%;
+    position: absolute;
+    top: 18vh;
+    left: 0;
+    padding: 0 10vw;
+    z-index: 12;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* align-items: center; */
+}
+
+#testing #camel-box i{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 1px #000000;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff2f0c, 3px 3px #ff5f18, 4px 4px #ff8e24,0px 0px 15px #000000;
+    width: 36vw;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#testing #camel-box #camel{
+    width: 30vw !important;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+#testing .box{
+    width: 100%;
+    z-index: 13;
+    padding: 10vw 10vw;
+    padding-top: 10vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-image: url("Assets/black-sand-isolated-white-background-grunge-texture_153912-14737.jpg");
+    background-color: #fff;
+}
+
+#testing .box i{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 1px #000000;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff2f0c, 3px 3px #ff5f18, 4px 4px #ff8e24,0px 0px 15px #000000;
+    width: 36vw;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#testing .box #lizard{
+    width: 40vw !important;
+    flex-shrink: 0;
+    object-fit: contain;
 }

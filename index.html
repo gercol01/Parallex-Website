@@ -6,55 +6,75 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo">SunLight</a>
+            <a href="#" class="logo" >Sunlight</a>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class = "active" >Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Work</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
         <section>
-            <img src="Assets/Better/Birds.png" id="birds">
-            <img src="Assets/Better/Sun (1).png" id="sun">
+            <img src="Assets/Better/Birds - Copy.png" id="birds">
+            <img src="Assets/Better/Sun (1) - Copy.png" id="sun">
             <h2 id="text">Sun light</h2>
-            <img src="Assets/Better/Back desert Transparent (2).png" id="desertback">
-            <img src="Assets/Better/Camels only Back2 Transparent - Copy.png" id="camels">
-            <img src="Assets/Better/Tree white Transparent (1) (2).png" id="tree">
-            <img src="Assets/Better/image (2).png" id="desertfront">
-            <img src="Assets/Better/image (10).png" id="camel">
-            <h3 id="para"><i>"Paralax scrolling is a web design technique in which 
-                the website background moves at a slower pace than the foreground. 
-                This results in a 3D effect as visitors scroll down the site, adding 
-                a sense of depth and creating a more immersive browsing experience. 
-                Parallax is based on optical illusion." - https://www.wix.com/blog/2019/08/what-is-parallax-scrolling-explained-with-examples/</i> </h3> 
-            </section>
-
+            <img src="Assets/Better/Back desert Transparent (3) - Copy.png" id="desertback">
+            <img src="Assets/Better/Camels only Back2 Transparent - Copy - Copy.png" id="camels">
+            <img src="Assets/Better/Tree white Transparent (1) (2) - Copy.png" id="tree">
+            <div id="testing">
+                <img src="Assets/Better/image (2) - Copy.png" id="desertfront">
+                <div class="camel-box" id="camel-box">
+                    <img src="Assets/Better/image (10) - Copy (1).png" id="camel">
+                    <i>"Paralax scrolling is a web design technique in which 
+                        the website background moves at a slower pace than the foreground. 
+                        This results in a 3D effect as visitors scroll down the site, adding 
+                        a sense of depth and creating a more immersive browsing experience. 
+                        Parallax is based on optical illusion." 
+                    </i>
+                </div>
+                <div class="box">
+                    <i> 
+                        Sand dune front - Danussa <br>
+                        Sand dune back - Danussa <br>
+                        Bird silhoutte - Ahkâm <br>
+                        Sun - freepik <br>
+                        Camels - abybak <br>
+                        Camel - rawpixel.com <br>
+                        Sand texture - vladimirpolikarpov <br>
+                        Lizard - rawpixel.com <br>
+                    </i>
+                    <img src="Assets/Lizard Transparent.png" id="lizard">
+                </div>
+            </div>
+        </section>
         <script>
-            let birds = document.getElementById('birds');
             let sun = document.getElementById('sun');
+            let birds = document.getElementById('birds');
             let camels = document.getElementById('camels');
-            let desertback = document.getElementById('desertback');
             let tree = document.getElementById('tree');
             let text= document.getElementById('text');
-            let desertfront = document.getElementById('desertfront');
-            let para = document.getElementById('para');
+            let desertfront = document.getElementById('testing');
+            let camel = document.getElementById('camel-box');
 
             window.addEventListener('scroll', function(){
                 let value = window.scrollY;
-                birds.style.top = value * -0.1 + 'px';
-                birds.style.marginRight = value * 0.15 + 'px';
-                sun.style.top = value * 1.0 + 'px';
-                sun.style.marginRight = value * -0.3 + 'px';
-                camels.style.marginRight = value * 0.3 + 'px';
-                desertback.style.top = value * 0 + 'px';
-                tree.style.top = value * -0.2 + 'px';
-                text.style.top = value * 0.15 + 20 + '%';
-                // desertfront.style.top = value * -1.0 + 'px';
-                desertfront.style.top = value * -0.1 + '%';
-                camel.style.top = value * -0.1 + '%';
-                para.style.top = value * -0.1 + 180 + '%';
+                birds.style.top = value * -0.005 + 20 + 'vw';
+                birds.style.left = value * -0.0075 + 30 + 'vw';
+                sun.style.top = value * 0.08 + 7 + 'vw';
+                sun.style.left = value * 0.017 + 74 + 'vw';
+                camels.style.left = value * -0.01 + 11 + 'vw';
+                tree.style.top = value * -0.013 + 23 + 'vw';
+
+                if(value < 800){
+                    text.style.top = value * 0.19 + 20 + 'vh';
+                }
+                
+                desertfront.style.top = value * -0.125 + 150 +'vh';
+                camel.style.top = value * -0.03 + 32 +'vh';
             })
         </script>
+
     </body>
+    
+
 </html>
